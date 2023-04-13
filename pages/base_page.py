@@ -75,7 +75,9 @@ class BasePage:
         except Exception as e:
             logging.exception(str(e))
             # Capture screenshot only when necessary
-        self.save_screenshot("wait_and_verify_text-Failed")
+            # self.save_screenshot("wait_and_verify_text-Failed")
+            ss_png = self.driver.get_screenshot_as_png()
+            allure.attach(ss_png, name="Screenshot", attachment_type=AttachmentType.PNG)
 
     def save_screenshot(self, filename):
         # Capture screenshot using Selenium's driver.save_screenshot
