@@ -74,3 +74,5 @@ class Registration(BasePage):
         BasePage.wait_and_verify_text(self, Constants.passwords_mismached_error, "הסיסמאות לא זהות, אולי זה מהתרגשות :)")
 
 
+
+
