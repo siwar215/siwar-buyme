@@ -1,5 +1,6 @@
 import logging
 
+from selenium.common import TimeoutException, NoSuchElementException
 from selenium.webdriver.support.relative_locator import locate_with
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -61,6 +62,7 @@ class BasePage:
         try:
             text = self.wait.until(EC.presence_of_element_located(locator))
             if expected_text not in text:
+                logging.debug(f"String '{expected_text}' wasn't found in '{text}'")
                 ss_png = self.driver.get_screenshot_as_png()
                 allure.attach(ss_png, name="Screenshot", attachment_type=AttachmentType.PNG)
             else:
@@ -68,10 +70,20 @@ class BasePage:
                 ss_png = self.driver.get_screenshot_as_png()
                 allure.attach(ss_png, name="Screenshot", attachment_type=AttachmentType.PNG)
                 return text
+        except TimeoutException:
+            logging.debug(f"Timed out waiting for element with locator '{locator}'")
+        except NoSuchElementException:
+            logging.debug(f"Element with locator '{locator}' not found")
         except Exception as e:
             logging.exception(str(e))
-            ss_png = self.driver.get_screenshot_as_png()
-            allure.attach(ss_png, name="Screenshot", attachment_type=AttachmentType.PNG)
+            # Capture screenshot only when necessary
+        self.save_screenshot("wait_and_verify_text-Failed")
+
+    def save_screenshot(self, filename):
+        # Capture screenshot using Selenium's driver.save_screenshot
+        self.driver.save_screenshot(filename)
+        logging.info(f"Screenshot saved as '{filename}'")
+
 
 
 
