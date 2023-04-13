@@ -19,20 +19,8 @@ class TestRegistration(TestCase):
         driver_path = self.cfg['drivers']['chrome']
         self.driver = webdriver.Chrome(service=Service(driver_path))
         self.base_page = BasePage(self.driver)
+        self.register_page = Registration(self.base_page)
 
     def test_a_success_register(self):
         BasePage.goto_link(self.base_page, self.cfg['url']['buymehomepage'])
-
-    # @classmethod
-    # def setUpClass(cls):
-    #
-    #     f = open('/Users/siwarkhateeb/Downloads/siwar-buyme/config.json', 'r')
-    #     config_json = json.load(f)
-    #     cls.cfg = config_json
-    #     driver_path = cls.cfg['drivers']['chrome']
-    #     cls.driver = webdriver.Chrome(service=Service(driver_path))
-    #     cls.base_page = BasePage(cls.driver)
-    #
-    # @classmethod
-    # def tearDownClass(cls):
-    #     cls.driver.quit()
+        self.register_page.register_success()
