@@ -10,7 +10,7 @@ from unittest import TestCase
 class TestRegistration(TestCase):
 
     def setUp(self):
-        f = open('config.json', 'r')
+        f = open('../config.json', 'r')
         config_json = json.load(f)
         self.cfg = config_json
         driver_path = self.cfg['drivers']['chrome']
