@@ -40,3 +40,4 @@ class TestRegistration(TestCase):
         self.register_page.click_on_login_button()
         self.register_page.click_on_register()
         self.register_page.if_pass_not_match()
+
