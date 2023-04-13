@@ -41,3 +41,11 @@ class TestRegistration(TestCase):
         self.register_page.click_on_register()
         self.register_page.if_pass_not_match()
 
+    def test_if_firstname_correct(self):
+        self.register_page.goto_link(self.cfg['url']['buymehomepage'])
+        self.register_page.click_on_login_button()
+        self.register_page.click_on_register()
+        self.register_page.if_first_name_correct()
+
+
+
