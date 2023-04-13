@@ -7,15 +7,10 @@ from pages.base_page import BasePage
 
 
 class Constants:
-    # login_register = By.LINK_TEXT, "כניסה / הרשמה"
-    login_register = By.CLASS_NAME, "notSigned"
-    login_email = By.XPATH, '//input[@type="email"]' # TODO: Verify why not inserted
-    login_pass = By.XPATH, '// *[ @ id = "ember2225"]'
-    # login_email = By.CSS_SELECTOR, "h1[class=bm-h1]"
-    # login_password = By.ID, "ember2225"
+    login_register = By.LINK_TEXT, "כניסה / הרשמה"
+    login_email = By.XPATH, "//input[@placeholder='מייל']"
+    login_pass = By.XPATH, "//input[@placeholder='סיסמה']"
     submit = By.XPATH, "//button[@type='submit']"
-
-
 
 
 class Home(BasePage):
@@ -38,5 +33,3 @@ class Home(BasePage):
         BasePage.wait_and_enter_text(self, Constants.login_email, "siwarkhateeb215@gmail.com")
         BasePage.wait_and_enter_text(self, Constants.login_pass, "Password123")
         BasePage.wait_and_click_on_element(self, Constants.submit)
-
-
