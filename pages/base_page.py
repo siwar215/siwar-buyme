@@ -21,14 +21,6 @@ class BasePage:
         self.driver = driver
         self.wait = WebDriverWait(self.driver, 10)
 
-    def wait_and_click_on_element(self, locator):
-        try:
-            self.wait.until(EC.presence_of_element_located(locator)).click()
-        except Exception as e:
-            logger.exception(str(e))
-            ss_png = self.driver.get_screenshot_as_png()
-            allure.attach(ss_png, name="Screenshot", attachment_type=AttachmentType.PNG)
-
     def goto_link(self, link):
         try:
             self.driver.get(link)
@@ -36,6 +28,14 @@ class BasePage:
         except Exception as e:
             logger.exception(str(e))
             allure.attach(self.driver.get_screenshot_as_png(), name="Screenshot", attachment_type=AttachmentType.PNG)
+
+    def wait_and_click_on_element(self, locator):
+        try:
+            self.wait.until(EC.presence_of_element_located(locator)).click()
+        except Exception as e:
+            logger.exception(str(e))
+            ss_png = self.driver.get_screenshot_as_png()
+            allure.attach(ss_png, name="Screenshot", attachment_type=AttachmentType.PNG)
 
     # def click_element(self, locator, value):
     #     try:
