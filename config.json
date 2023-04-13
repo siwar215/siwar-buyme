@@ -1,0 +1,6 @@
+{
+  "drivers": {
+    "chrome": "C:\\tools\\chromedriver_win32\\112.0.5615.49\\chromedriver.exe"
+  },
+  "url": "https://buyme.co.il"
+}
