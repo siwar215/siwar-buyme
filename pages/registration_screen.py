@@ -22,6 +22,7 @@ class Constants:
     submit = By.XPATH, "//button[@type='submit']"
     no_entery = By.CLASS_NAME, "parsley-required"
 
+
 class Registration(BasePage):
     def __init__(self, driver):
         BasePage.__init__(self, driver)
@@ -38,7 +39,8 @@ class Registration(BasePage):
         BasePage.wait_and_click_on_element(self, Constants.login_register)
 
     def click_on_register(self):
-        BasePage.wait_and_click_on_below_element(self, Constants.register, Constants.register_type, Constants.register_value)
+        BasePage.wait_and_click_on_below_element(self, Constants.register, Constants.register_type,
+                                                 Constants.register_value)
 
     def register(self):
         BasePage.wait_and_enter_text(self, Constants.register_first_name, "Siwar_khateeb")
@@ -48,8 +50,8 @@ class Registration(BasePage):
         BasePage.wait_and_click_on_element(self, Constants.agree_radio)
         BasePage.wait_and_click_on_element(self, Constants.submit)
 
-    # def if_email_valid(self):
-    #     BasePage.wait_and_enter_text(self, Constants.register_first_name, "Siwar_khateeb")
-    #     BasePage.wait_and_enter_text(self, Constants.register_email, "empty")
-    #     BasePage.wait_and_click_on_element(self, Constants.submit)
-    #     BasePage.wait_and_verify_text(self, Constants.no_entery, "ערך זה דרוש")
+    def if_email_valid(self):
+        BasePage.wait_and_enter_text(self, Constants.register_first_name, "Siwar_khateeb")
+        BasePage.wait_and_enter_text(self, Constants.register_email, "empty")
+        BasePage.wait_and_click_on_element(self, Constants.submit)
+        BasePage.wait_and_verify_text(self, Constants.no_entery, "ערך זה דרוש")

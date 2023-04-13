@@ -57,14 +57,20 @@ class BasePage:
             ss_png = self.driver.get_screenshot_as_png()
             allure.attach(ss_png, name="Screenshot", attachment_type=AttachmentType.PNG)
 
-    # def wait_and_verify_text(self, locator, expected_text):
-    #     text = self.wait.until(EC.presence_of_element_located(locator))
-    #     if expected_text not in text:
-    #         logging.debug(f"String {expected_text} wasn't found in {text}")
-    #         ss_png = self.driver.get_screenshot_as_png()
-    #         allure.attach(ss_png, name="Screenshot", attachment_type=AttachmentType.PNG)
-    #     else:
-    #         logging.info(f"Found String {expected_text} in {text}")
-    #         return text
+    def wait_and_verify_text(self, locator, expected_text):
+        try:
+            text = self.wait.until(EC.presence_of_element_located(locator))
+            if expected_text not in text:
+                ss_png = self.driver.get_screenshot_as_png()
+                allure.attach(ss_png, name="Screenshot", attachment_type=AttachmentType.PNG)
+            else:
+                logging.info(f"Found String {expected_text} in {text}")
+                ss_png = self.driver.get_screenshot_as_png()
+                allure.attach(ss_png, name="Screenshot", attachment_type=AttachmentType.PNG)
+                return text
+        except Exception as e:
+            logging.exception(str(e))
+            ss_png = self.driver.get_screenshot_as_png()
+            allure.attach(ss_png, name="Screenshot", attachment_type=AttachmentType.PNG)
 
 
