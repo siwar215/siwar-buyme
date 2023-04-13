@@ -1,0 +1,520 @@
+18:38:02, root ERROR Message: 
+ 
+Traceback (most recent call last):
+  File "/Users/siwarkhateeb/Downloads/siwar-buyme/pages/base_page.py", line 29, in goto_link
+    self.wait.until(EC.url_to_be(link))
+  File "/Users/siwarkhateeb/Library/Caches/pypoetry/virtualenvs/siwar-buyme-Vqth1sGJ-py3.8/lib/python3.8/site-packages/selenium/webdriver/support/wait.py", line 95, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+18:41:46, root ERROR Message: 
+ 
+Traceback (most recent call last):
+  File "/Users/siwarkhateeb/Downloads/siwar-buyme/pages/base_page.py", line 29, in goto_link
+    self.wait.until(EC.url_to_be(link))
+  File "/Users/siwarkhateeb/Library/Caches/pypoetry/virtualenvs/siwar-buyme-Vqth1sGJ-py3.8/lib/python3.8/site-packages/selenium/webdriver/support/wait.py", line 95, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+18:42:27, root ERROR Message: 
+ 
+Traceback (most recent call last):
+  File "/Users/siwarkhateeb/Downloads/siwar-buyme/pages/base_page.py", line 29, in goto_link
+    self.wait.until(EC.url_to_be(link))
+  File "/Users/siwarkhateeb/Library/Caches/pypoetry/virtualenvs/siwar-buyme-Vqth1sGJ-py3.8/lib/python3.8/site-packages/selenium/webdriver/support/wait.py", line 95, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+18:42:38, root ERROR Message: 
+Stacktrace:
+0   chromedriver                        0x0000000100980ae8 chromedriver + 4958952
+1   chromedriver                        0x00000001009787b3 chromedriver + 4925363
+2   chromedriver                        0x000000010053a1d6 chromedriver + 475606
+3   chromedriver                        0x000000010057da20 chromedriver + 752160
+4   chromedriver                        0x000000010057dc81 chromedriver + 752769
+5   chromedriver                        0x00000001005c1f64 chromedriver + 1032036
+6   chromedriver                        0x00000001005a3c3d chromedriver + 908349
+7   chromedriver                        0x00000001005bf25b chromedriver + 1020507
+8   chromedriver                        0x00000001005a39e3 chromedriver + 907747
+9   chromedriver                        0x000000010056daef chromedriver + 686831
+10  chromedriver                        0x000000010056f00e chromedriver + 692238
+11  chromedriver                        0x000000010093c9ad chromedriver + 4680109
+12  chromedriver                        0x0000000100941c12 chromedriver + 4701202
+13  chromedriver                        0x000000010094879f chromedriver + 4728735
+14  chromedriver                        0x0000000100942b7a chromedriver + 4705146
+15  chromedriver                        0x000000010091527e chromedriver + 4518526
+16  chromedriver                        0x0000000100962908 chromedriver + 4835592
+17  chromedriver                        0x0000000100962a87 chromedriver + 4835975
+18  chromedriver                        0x000000010097200f chromedriver + 4898831
+19  libsystem_pthread.dylib             0x00007ff8116fb1d3 _pthread_start + 125
+20  libsystem_pthread.dylib             0x00007ff8116f6bd3 thread_start + 15
+ 
+Traceback (most recent call last):
+  File "/Users/siwarkhateeb/Downloads/siwar-buyme/pages/base_page.py", line 45, in wait_and_enter_text
+    self.wait.until(EC.presence_of_element_located(locator)).send_keys(text)
+  File "/Users/siwarkhateeb/Library/Caches/pypoetry/virtualenvs/siwar-buyme-Vqth1sGJ-py3.8/lib/python3.8/site-packages/selenium/webdriver/support/wait.py", line 95, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+0   chromedriver                        0x0000000100980ae8 chromedriver + 4958952
+1   chromedriver                        0x00000001009787b3 chromedriver + 4925363
+2   chromedriver                        0x000000010053a1d6 chromedriver + 475606
+3   chromedriver                        0x000000010057da20 chromedriver + 752160
+4   chromedriver                        0x000000010057dc81 chromedriver + 752769
+5   chromedriver                        0x00000001005c1f64 chromedriver + 1032036
+6   chromedriver                        0x00000001005a3c3d chromedriver + 908349
+7   chromedriver                        0x00000001005bf25b chromedriver + 1020507
+8   chromedriver                        0x00000001005a39e3 chromedriver + 907747
+9   chromedriver                        0x000000010056daef chromedriver + 686831
+10  chromedriver                        0x000000010056f00e chromedriver + 692238
+11  chromedriver                        0x000000010093c9ad chromedriver + 4680109
+12  chromedriver                        0x0000000100941c12 chromedriver + 4701202
+13  chromedriver                        0x000000010094879f chromedriver + 4728735
+14  chromedriver                        0x0000000100942b7a chromedriver + 4705146
+15  chromedriver                        0x000000010091527e chromedriver + 4518526
+16  chromedriver                        0x0000000100962908 chromedriver + 4835592
+17  chromedriver                        0x0000000100962a87 chromedriver + 4835975
+18  chromedriver                        0x000000010097200f chromedriver + 4898831
+19  libsystem_pthread.dylib             0x00007ff8116fb1d3 _pthread_start + 125
+20  libsystem_pthread.dylib             0x00007ff8116f6bd3 thread_start + 15
+
+18:42:49, root ERROR Message: 
+Stacktrace:
+0   chromedriver                        0x0000000100980ae8 chromedriver + 4958952
+1   chromedriver                        0x00000001009787b3 chromedriver + 4925363
+2   chromedriver                        0x000000010053a1d6 chromedriver + 475606
+3   chromedriver                        0x000000010057da20 chromedriver + 752160
+4   chromedriver                        0x000000010057dc81 chromedriver + 752769
+5   chromedriver                        0x00000001005c1f64 chromedriver + 1032036
+6   chromedriver                        0x00000001005a3c3d chromedriver + 908349
+7   chromedriver                        0x00000001005bf25b chromedriver + 1020507
+8   chromedriver                        0x00000001005a39e3 chromedriver + 907747
+9   chromedriver                        0x000000010056daef chromedriver + 686831
+10  chromedriver                        0x000000010056f00e chromedriver + 692238
+11  chromedriver                        0x000000010093c9ad chromedriver + 4680109
+12  chromedriver                        0x0000000100941c12 chromedriver + 4701202
+13  chromedriver                        0x000000010094879f chromedriver + 4728735
+14  chromedriver                        0x0000000100942b7a chromedriver + 4705146
+15  chromedriver                        0x000000010091527e chromedriver + 4518526
+16  chromedriver                        0x0000000100962908 chromedriver + 4835592
+17  chromedriver                        0x0000000100962a87 chromedriver + 4835975
+18  chromedriver                        0x000000010097200f chromedriver + 4898831
+19  libsystem_pthread.dylib             0x00007ff8116fb1d3 _pthread_start + 125
+20  libsystem_pthread.dylib             0x00007ff8116f6bd3 thread_start + 15
+ 
+Traceback (most recent call last):
+  File "/Users/siwarkhateeb/Downloads/siwar-buyme/pages/base_page.py", line 45, in wait_and_enter_text
+    self.wait.until(EC.presence_of_element_located(locator)).send_keys(text)
+  File "/Users/siwarkhateeb/Library/Caches/pypoetry/virtualenvs/siwar-buyme-Vqth1sGJ-py3.8/lib/python3.8/site-packages/selenium/webdriver/support/wait.py", line 95, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+0   chromedriver                        0x0000000100980ae8 chromedriver + 4958952
+1   chromedriver                        0x00000001009787b3 chromedriver + 4925363
+2   chromedriver                        0x000000010053a1d6 chromedriver + 475606
+3   chromedriver                        0x000000010057da20 chromedriver + 752160
+4   chromedriver                        0x000000010057dc81 chromedriver + 752769
+5   chromedriver                        0x00000001005c1f64 chromedriver + 1032036
+6   chromedriver                        0x00000001005a3c3d chromedriver + 908349
+7   chromedriver                        0x00000001005bf25b chromedriver + 1020507
+8   chromedriver                        0x00000001005a39e3 chromedriver + 907747
+9   chromedriver                        0x000000010056daef chromedriver + 686831
+10  chromedriver                        0x000000010056f00e chromedriver + 692238
+11  chromedriver                        0x000000010093c9ad chromedriver + 4680109
+12  chromedriver                        0x0000000100941c12 chromedriver + 4701202
+13  chromedriver                        0x000000010094879f chromedriver + 4728735
+14  chromedriver                        0x0000000100942b7a chromedriver + 4705146
+15  chromedriver                        0x000000010091527e chromedriver + 4518526
+16  chromedriver                        0x0000000100962908 chromedriver + 4835592
+17  chromedriver                        0x0000000100962a87 chromedriver + 4835975
+18  chromedriver                        0x000000010097200f chromedriver + 4898831
+19  libsystem_pthread.dylib             0x00007ff8116fb1d3 _pthread_start + 125
+20  libsystem_pthread.dylib             0x00007ff8116f6bd3 thread_start + 15
+
+18:44:39, root ERROR Message: 
+ 
+Traceback (most recent call last):
+  File "/Users/siwarkhateeb/Downloads/siwar-buyme/pages/base_page.py", line 29, in goto_link
+    self.wait.until(EC.url_to_be(link))
+  File "/Users/siwarkhateeb/Library/Caches/pypoetry/virtualenvs/siwar-buyme-Vqth1sGJ-py3.8/lib/python3.8/site-packages/selenium/webdriver/support/wait.py", line 95, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+18:45:20, root ERROR Message: 
+ 
+Traceback (most recent call last):
+  File "/Users/siwarkhateeb/Downloads/siwar-buyme/pages/base_page.py", line 29, in goto_link
+    self.wait.until(EC.url_to_be(link))
+  File "/Users/siwarkhateeb/Library/Caches/pypoetry/virtualenvs/siwar-buyme-Vqth1sGJ-py3.8/lib/python3.8/site-packages/selenium/webdriver/support/wait.py", line 95, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+18:54:27, root ERROR Message: 
+ 
+Traceback (most recent call last):
+  File "/Users/siwarkhateeb/Downloads/siwar-buyme/pages/base_page.py", line 29, in goto_link
+    self.wait.until(EC.url_to_be(link))
+  File "/Users/siwarkhateeb/Library/Caches/pypoetry/virtualenvs/siwar-buyme-Vqth1sGJ-py3.8/lib/python3.8/site-packages/selenium/webdriver/support/wait.py", line 95, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+18:55:41, root ERROR Message: 
+ 
+Traceback (most recent call last):
+  File "/Users/siwarkhateeb/Downloads/siwar-buyme/pages/base_page.py", line 29, in goto_link
+    self.wait.until(EC.url_to_be(link))
+  File "/Users/siwarkhateeb/Library/Caches/pypoetry/virtualenvs/siwar-buyme-Vqth1sGJ-py3.8/lib/python3.8/site-packages/selenium/webdriver/support/wait.py", line 95, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+18:55:53, root ERROR Message: 
+Stacktrace:
+0   chromedriver                        0x00000001013ccae8 chromedriver + 4958952
+1   chromedriver                        0x00000001013c47b3 chromedriver + 4925363
+2   chromedriver                        0x0000000100f861d6 chromedriver + 475606
+3   chromedriver                        0x0000000100fc9a20 chromedriver + 752160
+4   chromedriver                        0x0000000100fc9c81 chromedriver + 752769
+5   chromedriver                        0x000000010100df64 chromedriver + 1032036
+6   chromedriver                        0x0000000100fefc3d chromedriver + 908349
+7   chromedriver                        0x000000010100b25b chromedriver + 1020507
+8   chromedriver                        0x0000000100fef9e3 chromedriver + 907747
+9   chromedriver                        0x0000000100fb9aef chromedriver + 686831
+10  chromedriver                        0x0000000100fbb00e chromedriver + 692238
+11  chromedriver                        0x00000001013889ad chromedriver + 4680109
+12  chromedriver                        0x000000010138dc12 chromedriver + 4701202
+13  chromedriver                        0x000000010139479f chromedriver + 4728735
+14  chromedriver                        0x000000010138eb7a chromedriver + 4705146
+15  chromedriver                        0x000000010136127e chromedriver + 4518526
+16  chromedriver                        0x00000001013ae908 chromedriver + 4835592
+17  chromedriver                        0x00000001013aea87 chromedriver + 4835975
+18  chromedriver                        0x00000001013be00f chromedriver + 4898831
+19  libsystem_pthread.dylib             0x00007ff8116fb1d3 _pthread_start + 125
+20  libsystem_pthread.dylib             0x00007ff8116f6bd3 thread_start + 15
+ 
+Traceback (most recent call last):
+  File "/Users/siwarkhateeb/Downloads/siwar-buyme/pages/base_page.py", line 45, in wait_and_enter_text
+    self.wait.until(EC.presence_of_element_located(locator)).send_keys(text)
+  File "/Users/siwarkhateeb/Library/Caches/pypoetry/virtualenvs/siwar-buyme-Vqth1sGJ-py3.8/lib/python3.8/site-packages/selenium/webdriver/support/wait.py", line 95, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+0   chromedriver                        0x00000001013ccae8 chromedriver + 4958952
+1   chromedriver                        0x00000001013c47b3 chromedriver + 4925363
+2   chromedriver                        0x0000000100f861d6 chromedriver + 475606
+3   chromedriver                        0x0000000100fc9a20 chromedriver + 752160
+4   chromedriver                        0x0000000100fc9c81 chromedriver + 752769
+5   chromedriver                        0x000000010100df64 chromedriver + 1032036
+6   chromedriver                        0x0000000100fefc3d chromedriver + 908349
+7   chromedriver                        0x000000010100b25b chromedriver + 1020507
+8   chromedriver                        0x0000000100fef9e3 chromedriver + 907747
+9   chromedriver                        0x0000000100fb9aef chromedriver + 686831
+10  chromedriver                        0x0000000100fbb00e chromedriver + 692238
+11  chromedriver                        0x00000001013889ad chromedriver + 4680109
+12  chromedriver                        0x000000010138dc12 chromedriver + 4701202
+13  chromedriver                        0x000000010139479f chromedriver + 4728735
+14  chromedriver                        0x000000010138eb7a chromedriver + 4705146
+15  chromedriver                        0x000000010136127e chromedriver + 4518526
+16  chromedriver                        0x00000001013ae908 chromedriver + 4835592
+17  chromedriver                        0x00000001013aea87 chromedriver + 4835975
+18  chromedriver                        0x00000001013be00f chromedriver + 4898831
+19  libsystem_pthread.dylib             0x00007ff8116fb1d3 _pthread_start + 125
+20  libsystem_pthread.dylib             0x00007ff8116f6bd3 thread_start + 15
+
+18:56:52, root ERROR Message: 
+ 
+Traceback (most recent call last):
+  File "/Users/siwarkhateeb/Downloads/siwar-buyme/pages/base_page.py", line 29, in goto_link
+    self.wait.until(EC.url_to_be(link))
+  File "/Users/siwarkhateeb/Library/Caches/pypoetry/virtualenvs/siwar-buyme-Vqth1sGJ-py3.8/lib/python3.8/site-packages/selenium/webdriver/support/wait.py", line 95, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+20:18:18, root ERROR Message: 
+ 
+Traceback (most recent call last):
+  File "/Users/siwarkhateeb/Downloads/siwar-buyme/pages/base_page.py", line 29, in goto_link
+    self.wait.until(EC.url_to_be(link))
+  File "/Users/siwarkhateeb/Library/Caches/pypoetry/virtualenvs/siwar-buyme-Vqth1sGJ-py3.8/lib/python3.8/site-packages/selenium/webdriver/support/wait.py", line 95, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+20:19:49, root ERROR Message: 
+ 
+Traceback (most recent call last):
+  File "/Users/siwarkhateeb/Downloads/siwar-buyme/pages/base_page.py", line 29, in goto_link
+    self.wait.until(EC.url_to_be(link))
+  File "/Users/siwarkhateeb/Library/Caches/pypoetry/virtualenvs/siwar-buyme-Vqth1sGJ-py3.8/lib/python3.8/site-packages/selenium/webdriver/support/wait.py", line 95, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+20:22:30, root ERROR Message: 
+ 
+Traceback (most recent call last):
+  File "/Users/siwarkhateeb/Downloads/siwar-buyme/pages/base_page.py", line 29, in goto_link
+    self.wait.until(EC.url_to_be(link))
+  File "/Users/siwarkhateeb/Library/Caches/pypoetry/virtualenvs/siwar-buyme-Vqth1sGJ-py3.8/lib/python3.8/site-packages/selenium/webdriver/support/wait.py", line 95, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+20:23:15, root ERROR Message: 
+ 
+Traceback (most recent call last):
+  File "/Users/siwarkhateeb/Downloads/siwar-buyme/pages/base_page.py", line 29, in goto_link
+    self.wait.until(EC.url_to_be(link))
+  File "/Users/siwarkhateeb/Library/Caches/pypoetry/virtualenvs/siwar-buyme-Vqth1sGJ-py3.8/lib/python3.8/site-packages/selenium/webdriver/support/wait.py", line 95, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+20:23:22, root ERROR argument of type 'WebElement' is not iterable 
+Traceback (most recent call last):
+  File "/Users/siwarkhateeb/Downloads/siwar-buyme/pages/base_page.py", line 63, in wait_and_verify_text
+    if expected_text not in text:
+TypeError: argument of type 'WebElement' is not iterable
+20:28:51, root ERROR Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=112.0.5615.49)
+Stacktrace:
+0   chromedriver                        0x0000000102e9cae8 chromedriver + 4958952
+1   chromedriver                        0x0000000102e947b3 chromedriver + 4925363
+2   chromedriver                        0x0000000102a561d6 chromedriver + 475606
+3   chromedriver                        0x0000000102a2bcec chromedriver + 302316
+4   chromedriver                        0x0000000102ac4f2f chromedriver + 929583
+5   chromedriver                        0x0000000102ada926 chromedriver + 1018150
+6   chromedriver                        0x0000000102abf9e3 chromedriver + 907747
+7   chromedriver                        0x0000000102a89aef chromedriver + 686831
+8   chromedriver                        0x0000000102a8b00e chromedriver + 692238
+9   chromedriver                        0x0000000102e589ad chromedriver + 4680109
+10  chromedriver                        0x0000000102e5dc12 chromedriver + 4701202
+11  chromedriver                        0x0000000102e6479f chromedriver + 4728735
+12  chromedriver                        0x0000000102e5eb7a chromedriver + 4705146
+13  chromedriver                        0x0000000102e3127e chromedriver + 4518526
+14  chromedriver                        0x0000000102e7e908 chromedriver + 4835592
+15  chromedriver                        0x0000000102e7ea87 chromedriver + 4835975
+16  chromedriver                        0x0000000102e8e00f chromedriver + 4898831
+17  libsystem_pthread.dylib             0x00007ff8116fb1d3 _pthread_start + 125
+18  libsystem_pthread.dylib             0x00007ff8116f6bd3 thread_start + 15
+ 
+Traceback (most recent call last):
+  File "/Users/siwarkhateeb/Downloads/siwar-buyme/pages/base_page.py", line 30, in goto_link
+    self.wait.until(EC.url_to_be(link))
+  File "/Users/siwarkhateeb/Library/Caches/pypoetry/virtualenvs/siwar-buyme-Vqth1sGJ-py3.8/lib/python3.8/site-packages/selenium/webdriver/support/wait.py", line 86, in until
+    value = method(self._driver)
+  File "/Users/siwarkhateeb/Library/Caches/pypoetry/virtualenvs/siwar-buyme-Vqth1sGJ-py3.8/lib/python3.8/site-packages/selenium/webdriver/support/expected_conditions.py", line 99, in _predicate
+    return url == driver.current_url
+  File "/Users/siwarkhateeb/Library/Caches/pypoetry/virtualenvs/siwar-buyme-Vqth1sGJ-py3.8/lib/python3.8/site-packages/selenium/webdriver/remote/webdriver.py", line 538, in current_url
+    return self.execute(Command.GET_CURRENT_URL)["value"]
+  File "/Users/siwarkhateeb/Library/Caches/pypoetry/virtualenvs/siwar-buyme-Vqth1sGJ-py3.8/lib/python3.8/site-packages/selenium/webdriver/remote/webdriver.py", line 444, in execute
+    self.error_handler.check_response(response)
+  File "/Users/siwarkhateeb/Library/Caches/pypoetry/virtualenvs/siwar-buyme-Vqth1sGJ-py3.8/lib/python3.8/site-packages/selenium/webdriver/remote/errorhandler.py", line 249, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=112.0.5615.49)
+Stacktrace:
+0   chromedriver                        0x0000000102e9cae8 chromedriver + 4958952
+1   chromedriver                        0x0000000102e947b3 chromedriver + 4925363
+2   chromedriver                        0x0000000102a561d6 chromedriver + 475606
+3   chromedriver                        0x0000000102a2bcec chromedriver + 302316
+4   chromedriver                        0x0000000102ac4f2f chromedriver + 929583
+5   chromedriver                        0x0000000102ada926 chromedriver + 1018150
+6   chromedriver                        0x0000000102abf9e3 chromedriver + 907747
+7   chromedriver                        0x0000000102a89aef chromedriver + 686831
+8   chromedriver                        0x0000000102a8b00e chromedriver + 692238
+9   chromedriver                        0x0000000102e589ad chromedriver + 4680109
+10  chromedriver                        0x0000000102e5dc12 chromedriver + 4701202
+11  chromedriver                        0x0000000102e6479f chromedriver + 4728735
+12  chromedriver                        0x0000000102e5eb7a chromedriver + 4705146
+13  chromedriver                        0x0000000102e3127e chromedriver + 4518526
+14  chromedriver                        0x0000000102e7e908 chromedriver + 4835592
+15  chromedriver                        0x0000000102e7ea87 chromedriver + 4835975
+16  chromedriver                        0x0000000102e8e00f chromedriver + 4898831
+17  libsystem_pthread.dylib             0x00007ff8116fb1d3 _pthread_start + 125
+18  libsystem_pthread.dylib             0x00007ff8116f6bd3 thread_start + 15
+
+20:29:22, root ERROR Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=112.0.5615.49)
+Stacktrace:
+0   chromedriver                        0x0000000102e45ae8 chromedriver + 4958952
+1   chromedriver                        0x0000000102e3d7b3 chromedriver + 4925363
+2   chromedriver                        0x00000001029ff1d6 chromedriver + 475606
+3   chromedriver                        0x00000001029d4cec chromedriver + 302316
+4   chromedriver                        0x0000000102a6df2f chromedriver + 929583
+5   chromedriver                        0x0000000102a83926 chromedriver + 1018150
+6   chromedriver                        0x0000000102a689e3 chromedriver + 907747
+7   chromedriver                        0x0000000102a32aef chromedriver + 686831
+8   chromedriver                        0x0000000102a3400e chromedriver + 692238
+9   chromedriver                        0x0000000102e019ad chromedriver + 4680109
+10  chromedriver                        0x0000000102e06c12 chromedriver + 4701202
+11  chromedriver                        0x0000000102e0d79f chromedriver + 4728735
+12  chromedriver                        0x0000000102e07b7a chromedriver + 4705146
+13  chromedriver                        0x0000000102dda27e chromedriver + 4518526
+14  chromedriver                        0x0000000102e27908 chromedriver + 4835592
+15  chromedriver                        0x0000000102e27a87 chromedriver + 4835975
+16  chromedriver                        0x0000000102e3700f chromedriver + 4898831
+17  libsystem_pthread.dylib             0x00007ff8116fb1d3 _pthread_start + 125
+18  libsystem_pthread.dylib             0x00007ff8116f6bd3 thread_start + 15
+ 
+Traceback (most recent call last):
+  File "/Users/siwarkhateeb/Downloads/siwar-buyme/pages/base_page.py", line 30, in goto_link
+    self.wait.until(EC.url_to_be(link))
+  File "/Users/siwarkhateeb/Library/Caches/pypoetry/virtualenvs/siwar-buyme-Vqth1sGJ-py3.8/lib/python3.8/site-packages/selenium/webdriver/support/wait.py", line 86, in until
+    value = method(self._driver)
+  File "/Users/siwarkhateeb/Library/Caches/pypoetry/virtualenvs/siwar-buyme-Vqth1sGJ-py3.8/lib/python3.8/site-packages/selenium/webdriver/support/expected_conditions.py", line 99, in _predicate
+    return url == driver.current_url
+  File "/Users/siwarkhateeb/Library/Caches/pypoetry/virtualenvs/siwar-buyme-Vqth1sGJ-py3.8/lib/python3.8/site-packages/selenium/webdriver/remote/webdriver.py", line 538, in current_url
+    return self.execute(Command.GET_CURRENT_URL)["value"]
+  File "/Users/siwarkhateeb/Library/Caches/pypoetry/virtualenvs/siwar-buyme-Vqth1sGJ-py3.8/lib/python3.8/site-packages/selenium/webdriver/remote/webdriver.py", line 444, in execute
+    self.error_handler.check_response(response)
+  File "/Users/siwarkhateeb/Library/Caches/pypoetry/virtualenvs/siwar-buyme-Vqth1sGJ-py3.8/lib/python3.8/site-packages/selenium/webdriver/remote/errorhandler.py", line 249, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=112.0.5615.49)
+Stacktrace:
+0   chromedriver                        0x0000000102e45ae8 chromedriver + 4958952
+1   chromedriver                        0x0000000102e3d7b3 chromedriver + 4925363
+2   chromedriver                        0x00000001029ff1d6 chromedriver + 475606
+3   chromedriver                        0x00000001029d4cec chromedriver + 302316
+4   chromedriver                        0x0000000102a6df2f chromedriver + 929583
+5   chromedriver                        0x0000000102a83926 chromedriver + 1018150
+6   chromedriver                        0x0000000102a689e3 chromedriver + 907747
+7   chromedriver                        0x0000000102a32aef chromedriver + 686831
+8   chromedriver                        0x0000000102a3400e chromedriver + 692238
+9   chromedriver                        0x0000000102e019ad chromedriver + 4680109
+10  chromedriver                        0x0000000102e06c12 chromedriver + 4701202
+11  chromedriver                        0x0000000102e0d79f chromedriver + 4728735
+12  chromedriver                        0x0000000102e07b7a chromedriver + 4705146
+13  chromedriver                        0x0000000102dda27e chromedriver + 4518526
+14  chromedriver                        0x0000000102e27908 chromedriver + 4835592
+15  chromedriver                        0x0000000102e27a87 chromedriver + 4835975
+16  chromedriver                        0x0000000102e3700f chromedriver + 4898831
+17  libsystem_pthread.dylib             0x00007ff8116fb1d3 _pthread_start + 125
+18  libsystem_pthread.dylib             0x00007ff8116f6bd3 thread_start + 15
+
+20:29:36, root ERROR Message: 
+ 
+Traceback (most recent call last):
+  File "/Users/siwarkhateeb/Downloads/siwar-buyme/pages/base_page.py", line 30, in goto_link
+    self.wait.until(EC.url_to_be(link))
+  File "/Users/siwarkhateeb/Library/Caches/pypoetry/virtualenvs/siwar-buyme-Vqth1sGJ-py3.8/lib/python3.8/site-packages/selenium/webdriver/support/wait.py", line 95, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+20:29:49, root ERROR Message: 
+ 
+Traceback (most recent call last):
+  File "/Users/siwarkhateeb/Downloads/siwar-buyme/pages/base_page.py", line 30, in goto_link
+    self.wait.until(EC.url_to_be(link))
+  File "/Users/siwarkhateeb/Library/Caches/pypoetry/virtualenvs/siwar-buyme-Vqth1sGJ-py3.8/lib/python3.8/site-packages/selenium/webdriver/support/wait.py", line 95, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+20:29:49, root ERROR argument of type 'WebElement' is not iterable 
+Traceback (most recent call last):
+  File "/Users/siwarkhateeb/Downloads/siwar-buyme/pages/base_page.py", line 64, in wait_and_verify_text
+    if expected_text not in text:
+TypeError: argument of type 'WebElement' is not iterable
+20:29:56, root ERROR argument of type 'WebElement' is not iterable 
+Traceback (most recent call last):
+  File "/Users/siwarkhateeb/Downloads/siwar-buyme/pages/base_page.py", line 64, in wait_and_verify_text
+    if expected_text not in text:
+TypeError: argument of type 'WebElement' is not iterable
+20:39:44, root ERROR Message: 
+ 
+Traceback (most recent call last):
+  File "/Users/siwarkhateeb/Downloads/siwar-buyme/pages/base_page.py", line 30, in goto_link
+    self.wait.until(EC.url_to_be(link))
+  File "/Users/siwarkhateeb/Library/Caches/pypoetry/virtualenvs/siwar-buyme-Vqth1sGJ-py3.8/lib/python3.8/site-packages/selenium/webdriver/support/wait.py", line 95, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+20:39:50, root ERROR argument of type 'WebElement' is not iterable 
+Traceback (most recent call last):
+  File "/Users/siwarkhateeb/Downloads/siwar-buyme/pages/base_page.py", line 64, in wait_and_verify_text
+    if expected_text not in text:
+TypeError: argument of type 'WebElement' is not iterable
+20:39:53, root ERROR argument of type 'WebElement' is not iterable 
+Traceback (most recent call last):
+  File "/Users/siwarkhateeb/Downloads/siwar-buyme/pages/base_page.py", line 64, in wait_and_verify_text
+    if expected_text not in text:
+TypeError: argument of type 'WebElement' is not iterable
+20:43:59, root ERROR Message: 
+ 
+Traceback (most recent call last):
+  File "/Users/siwarkhateeb/Downloads/siwar-buyme/pages/base_page.py", line 30, in goto_link
+    self.wait.until(EC.url_to_be(link))
+  File "/Users/siwarkhateeb/Library/Caches/pypoetry/virtualenvs/siwar-buyme-Vqth1sGJ-py3.8/lib/python3.8/site-packages/selenium/webdriver/support/wait.py", line 95, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+20:44:05, root ERROR argument of type 'WebElement' is not iterable 
+Traceback (most recent call last):
+  File "/Users/siwarkhateeb/Downloads/siwar-buyme/pages/base_page.py", line 64, in wait_and_verify_text
+    if expected_text not in text:
+TypeError: argument of type 'WebElement' is not iterable
+20:45:20, root ERROR Message: 
+ 
+Traceback (most recent call last):
+  File "/Users/siwarkhateeb/Downloads/siwar-buyme/pages/base_page.py", line 30, in goto_link
+    self.wait.until(EC.url_to_be(link))
+  File "/Users/siwarkhateeb/Library/Caches/pypoetry/virtualenvs/siwar-buyme-Vqth1sGJ-py3.8/lib/python3.8/site-packages/selenium/webdriver/support/wait.py", line 95, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+20:45:26, root ERROR argument of type 'WebElement' is not iterable 
+Traceback (most recent call last):
+  File "/Users/siwarkhateeb/Downloads/siwar-buyme/pages/base_page.py", line 64, in wait_and_verify_text
+    if expected_text not in text:
+TypeError: argument of type 'WebElement' is not iterable
+20:50:15, root ERROR Message: 
+ 
+Traceback (most recent call last):
+  File "/Users/siwarkhateeb/Downloads/siwar-buyme/pages/base_page.py", line 30, in goto_link
+    self.wait.until(EC.url_to_be(link))
+  File "/Users/siwarkhateeb/Library/Caches/pypoetry/virtualenvs/siwar-buyme-Vqth1sGJ-py3.8/lib/python3.8/site-packages/selenium/webdriver/support/wait.py", line 95, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+20:50:22, root ERROR argument of type 'WebElement' is not iterable 
+Traceback (most recent call last):
+  File "/Users/siwarkhateeb/Downloads/siwar-buyme/pages/base_page.py", line 64, in wait_and_verify_text
+    if expected_text not in text:
+TypeError: argument of type 'WebElement' is not iterable
+20:52:16, root ERROR Message: 
+ 
+Traceback (most recent call last):
+  File "/Users/siwarkhateeb/Downloads/siwar-buyme/pages/base_page.py", line 30, in goto_link
+    self.wait.until(EC.url_to_be(link))
+  File "/Users/siwarkhateeb/Library/Caches/pypoetry/virtualenvs/siwar-buyme-Vqth1sGJ-py3.8/lib/python3.8/site-packages/selenium/webdriver/support/wait.py", line 95, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+20:52:22, root ERROR argument of type 'WebElement' is not iterable 
+Traceback (most recent call last):
+  File "/Users/siwarkhateeb/Downloads/siwar-buyme/pages/base_page.py", line 64, in wait_and_verify_text
+    if expected_text not in text:
+TypeError: argument of type 'WebElement' is not iterable
+20:54:22, root ERROR Message: 
+ 
+Traceback (most recent call last):
+  File "/Users/siwarkhateeb/Downloads/siwar-buyme/pages/base_page.py", line 30, in goto_link
+    self.wait.until(EC.url_to_be(link))
+  File "/Users/siwarkhateeb/Library/Caches/pypoetry/virtualenvs/siwar-buyme-Vqth1sGJ-py3.8/lib/python3.8/site-packages/selenium/webdriver/support/wait.py", line 95, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+20:54:28, root ERROR argument of type 'WebElement' is not iterable 
+Traceback (most recent call last):
+  File "/Users/siwarkhateeb/Downloads/siwar-buyme/pages/base_page.py", line 64, in wait_and_verify_text
+    if expected_text not in text:
+TypeError: argument of type 'WebElement' is not iterable
+22:25:09, root ERROR Message: 
+ 
+Traceback (most recent call last):
+  File "/Users/siwarkhateeb/Downloads/siwar-buyme/pages/base_page.py", line 30, in goto_link
+    self.wait.until(EC.url_to_be(link))
+  File "/Users/siwarkhateeb/Library/Caches/pypoetry/virtualenvs/siwar-buyme-Vqth1sGJ-py3.8/lib/python3.8/site-packages/selenium/webdriver/support/wait.py", line 95, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
