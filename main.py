@@ -1,6 +1,5 @@
 import json
-from lib2to3.pgen2 import driver
-from unittest import TestCase
+import unittest
 
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
