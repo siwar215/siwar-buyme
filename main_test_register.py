@@ -28,3 +28,15 @@ class TestRegistration(TestCase):
         self.register_page.click_on_login_button()
         self.register_page.click_on_register()
         self.register_page.if_email_valid()
+
+    def test_if_pass_valid(self):
+        self.register_page.goto_link(self.cfg['url']['buymehomepage'])
+        self.register_page.click_on_login_button()
+        self.register_page.click_on_register()
+        self.register_page.if_pass_valid()
+
+    def test_if_pass_mismatched(self):
+        self.register_page.goto_link(self.cfg['url']['buymehomepage'])
+        self.register_page.click_on_login_button()
+        self.register_page.click_on_register()
+        self.register_page.if_pass_not_match()
