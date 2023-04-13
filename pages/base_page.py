@@ -74,3 +74,5 @@ class BasePage:
             allure.attach(ss_png, name="Screenshot", attachment_type=AttachmentType.PNG)
 
 
+
+
