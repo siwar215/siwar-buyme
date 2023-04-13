@@ -1,13 +1,8 @@
-import json
 import logging
-from selenium import webdriver
-from allure_commons.types import AttachmentType
-
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.support.relative_locator import locate_with
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import allure
+from allure_commons.types import AttachmentType
 
 # Configure logging to write to a file
 logger = logging.getLogger()
@@ -26,6 +21,14 @@ class BasePage:
         self.driver = driver
         self.wait = WebDriverWait(self.driver, 10)
 
+    def wait_and_click_on_element(self, locator):
+        try:
+            self.wait.until(EC.presence_of_element_located(locator)).click()
+        except Exception as e:
+            logger.exception(str(e))
+            ss_png = self.driver.get_screenshot_as_png()
+            allure.attach(ss_png, name="Screenshot", attachment_type=AttachmentType.PNG)
+
     def goto_link(self, link):
         try:
             self.driver.get(link)
@@ -34,35 +37,26 @@ class BasePage:
             logger.exception(str(e))
             allure.attach(self.driver.get_screenshot_as_png(), name="Screenshot", attachment_type=AttachmentType.PNG)
 
-    def click_element(self, locator, value):
-        try:
-            self.driver.find_element(locator, value).click()
-        except Exception as exception:
-            logger.error(f"An exception occurred: {exception}")
-            allure.attach(self.driver.get_screenshot_as_png(), name="Screenshot", attachment_type=AttachmentType.PNG)
+    # def click_element(self, locator, value):
+    #     try:
+    #         self.driver.find_element(locator, value).click()
+    #     except Exception as exception:
+    #         logger.error(f"An exception occurred: {exception}")
+    #         allure.attach(self.driver.get_screenshot_as_png(), name="Screenshot", attachment_type=AttachmentType.PNG)
 
-    def wait_and_click_on_element(self, locator):
-        try:
-            self.wait.until(EC.element_to_be_clickable(locator)).click()
-        except Exception as e:
-            logger.exception(str(e))
-            allure.attach(self.driver.get_screenshot_as_png(), name="Screenshot",
-                          attachment_type=AttachmentType.PNG)
-
-    def wait_and_enter_text(self, locator, text):
-        try:
-            self.wait.until(EC.presence_of_element_located(locator)).send_keys(text)
-        except Exception as e:
-            logger.exception(str(e))
-            allure.attach(self.driver.get_screenshot_as_png(), name="Screenshot",
-                          attachment_type=AttachmentType.PNG)
-
-    def find_element(self, locator, value):
-        try:
-            element = self.driver.find_element(locator, value)
-            return element
-        except Exception as exception:
-            logger.error(f"An exception occurred: {exception}")
-            allure.attach(self.driver.get_screenshot_as_png(), name="Screenshot", attachment_type=AttachmentType.PNG)
-
-
+    #
+    # def wait_and_enter_text(self, locator, text):
+    #     try:
+    #         self.wait.until(EC.presence_of_element_located(locator)).send_keys(text)
+    #     except Exception as e:
+    #         logger.exception(str(e))
+    #         allure.attach(self.driver.get_screenshot_as_png(), name="Screenshot",
+    #                       attachment_type=AttachmentType.PNG)
+    #
+    # def find_element(self, locator, value):
+    #     try:
+    #         element = self.driver.find_element(locator, value)
+    #         return element
+    #     except Exception as exception:
+    #         logger.error(f"An exception occurred: {exception}")
+    #         allure.attach(self.driver.get_screenshot_as_png(), name="Screenshot", attachment_type=AttachmentType.PNG)
