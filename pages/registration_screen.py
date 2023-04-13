@@ -47,8 +47,8 @@ class Registration(BasePage):
     def register(self):
         BasePage.wait_and_enter_text(self, Constants.register_first_name, "Siwar")
         BasePage.wait_and_enter_text(self, Constants.register_email, "siwartest@email.com")
-        BasePage.wait_and_enter_text(self, Constants.register_password, "Password")
-        BasePage.wait_and_enter_text(self, Constants.register_password_conf, "Password")
+        BasePage.wait_and_enter_text(self, Constants.register_password, "Password123")
+        BasePage.wait_and_enter_text(self, Constants.register_password_conf, "Password123")
         BasePage.wait_and_click_on_element(self, Constants.agree_radio)
         BasePage.wait_and_click_on_element(self, Constants.submit)
 
@@ -77,11 +77,10 @@ class Registration(BasePage):
     def if_first_name_correct(self):
         BasePage.wait_and_enter_text(self, Constants.register_first_name, "Siwar_khaateeb")
         BasePage.wait_and_enter_text(self, Constants.register_email, "siwartest@email.com")
-        BasePage.wait_and_enter_text(self, Constants.register_password, "Password")
-        BasePage.wait_and_enter_text(self, Constants.register_password_conf, "Password")
+        BasePage.wait_and_enter_text(self, Constants.register_password, "Password123")
+        BasePage.wait_and_enter_text(self, Constants.register_password_conf, "Password123")
         BasePage.wait_and_verify_text(self, Constants.first_name_not_correct,
                                       "מצטערים, אבל השם יכול להכיל רק אותיות, מספרים ורווח בלבד.")
-
 
 
 
