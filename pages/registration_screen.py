@@ -73,6 +73,7 @@ class Registration(BasePage):
         BasePage.wait_and_verify_text(self, Constants.passwords_mismached_error, "הסיסמאות לא זהות, אולי זה מהתרגשות :)")
 
     def if_first_name_correct(self):
+        # Assert first-name field
         BasePage.wait_and_enter_text(self, Constants.register_first_name, "Siwar_khaateeb")
         BasePage.wait_and_enter_text(self, Constants.register_email, "siwartest@email.com")
         BasePage.wait_and_enter_text(self, Constants.register_password, "Password123")

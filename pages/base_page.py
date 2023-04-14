@@ -1,4 +1,5 @@
 import logging
+import time
 
 from selenium.common import TimeoutException, NoSuchElementException
 from selenium.webdriver.support.relative_locator import locate_with
@@ -84,7 +85,17 @@ class BasePage:
         self.driver.save_screenshot(filename)
         logging.info(f"Screenshot saved as '{filename}'")
 
-
-
-
-
+    def scroll_page(self, direction: str):
+        try:
+            if direction == "up":
+                # Scroll to the top of the page
+                self.driver.execute_script("window.scrollTo(0, 0);")
+                time.sleep(1)
+            elif direction == "down":
+                # Scroll to the bottom of the page
+                self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+                time.sleep(1)
+        except Exception as e:
+            # Invalid direction parameter
+            logging.exception(str(e))
+            self.save_screenshot("scroll_page-Failed")
