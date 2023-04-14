@@ -23,5 +23,3 @@ class TestRegistration(TestCase):
     def test_search_for_gift(self):
         self.home_screen.goto_link(self.cfg['url']['buymehomepage'])
         self.home_screen.search_for_Gift()
-
-
