@@ -50,3 +50,4 @@ class Home(BasePage):
         BasePage.wait_and_click_on_element(self, Constants.drop_category)
         BasePage.wait_and_click_on_element(self, Constants.drop_subcategory)
         BasePage.wait_and_click_on_element(self, Constants.button_find_gift)
+
