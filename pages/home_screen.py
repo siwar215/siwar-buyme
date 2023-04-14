@@ -42,7 +42,6 @@ class Home(BasePage):
         BasePage.wait_and_click_on_element(self, Constants.submit)
 
     def search_for_Gift(self):
-        self.driver.execute_script(f"window.scrollBy(0, 300);")
         BasePage.wait_and_click_on_element(self, Constants.drop_price)
         BasePage.wait_and_click_on_element(self, Constants.drop_amount)
         BasePage.wait_and_click_on_element(self, Constants.drop_area)
