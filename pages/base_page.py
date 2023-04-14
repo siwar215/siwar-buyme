@@ -109,7 +109,7 @@ class BasePage:
             self.save_screenshot("verify_link-Failed")
 
     def scroll_search_and_click_element(self, locator, times):
-        scroll_amount = 300
+        scroll_amount = 400
         for i in range(times):
             try:
                 self.wait.until(EC.presence_of_element_located(locator))

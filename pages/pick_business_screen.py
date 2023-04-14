@@ -8,7 +8,7 @@ from pages.base_page import BasePage
 
 class Constants:
     search_button = By.XPATH, "//a[@class='ember-view bm-btn no-reverse main md ember-view']"
-    card_azrieli = By.XPATH, "//a[@title='AZRIELI GIFTCARD']"
+    business_name = By.XPATH, "//a[@title='קסטרו - CASTRO']"
     card_value = By.XPATH, '//input[@placeholder="הכנס סכום"]'
     card_submit = By.XPATH, '//button[@type="submit"]'
     # card = By.XPATH, "//div[@class='bottom'][contains(text(), 'TEL AVIV')]"
@@ -37,7 +37,7 @@ class Pick_Business(BasePage):
         # clicking on the search button to view all the businesses on BuyMe website
         BasePage.wait_and_click_on_element(self, Constants.search_button)
         BasePage.assert_url(self, "https://buyme.co.il/search")
-        BasePage.scroll_search_and_click_element(self, Constants.card_azrieli, 5)
-        BasePage.wait_and_click_on_element(self, Constants.card_azrieli)
+        BasePage.scroll_search_and_click_element(self, Constants.business_name, 10)
+        BasePage.wait_and_click_on_element(self, Constants.business_name)
         BasePage.wait_and_enter_text(self, Constants.card_value, "555")
         BasePage.wait_and_click_on_element(self, Constants.card_submit)
