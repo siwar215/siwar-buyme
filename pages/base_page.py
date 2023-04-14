@@ -2,6 +2,7 @@ import logging
 import time
 
 from selenium.common import TimeoutException, NoSuchElementException
+from selenium.webdriver import ActionChains
 from selenium.webdriver.support.relative_locator import locate_with
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -99,3 +100,23 @@ class BasePage:
             # Invalid direction parameter
             logging.exception(str(e))
             self.save_screenshot("scroll_page-Failed")
+
+    def assert_url(self, link):
+        try:
+            self.wait.until(EC.url_to_be(link))
+        except TimeoutException:
+            logging.error(f"Timed out waiting for URL to be: {link}")
+            self.save_screenshot("verify_link-Failed")
+
+    def scroll_search_and_click_element(self, locator, times):
+        scroll_amount = 300
+        for i in range(times):
+            try:
+                self.wait.until(EC.presence_of_element_located(locator))
+                ActionChains(self.driver).move_to_element(locator).click().perform()
+                return
+            except Exception as e:
+                self.driver.execute_script(f"window.scrollBy(0, {scroll_amount});")
+                logging.exception(str(e))
+                logging.error(f"Element {locator} wasn't found after {times} times")
+                self.save_screenshot("scroll_and_search_element-Failed")
