@@ -17,6 +17,6 @@ class TestGiftPurchase(TestCase):
         self.pick_business_screen = Pick_Business(self.driver)
         self.gift_purchase_screen = sender_and_receiver(self.driver)
 
-    def test_pick_business2(self):
+    def test_gift_purchase(self):
         self.gift_purchase_screen.scroll_to_bottom_screen()
 

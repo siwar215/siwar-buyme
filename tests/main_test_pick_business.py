@@ -15,8 +15,6 @@ class TestPickBusiness(TestCase):
         self.driver = webdriver.Chrome(service=Service(driver_path))
         self.pick_business_screen = Pick_Business(self.driver)
 
-
     def test_pick_business(self):
         self.pick_business_screen.goto_link(self.cfg['url']['buymehomepage'])
         self.pick_business_screen.choose_business_gift_card()
-
