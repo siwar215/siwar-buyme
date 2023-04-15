@@ -3,6 +3,12 @@
     "chrome": "</Users/siwarkhateeb/Downloads/chromedriver_mac_arm64/chromedriver>"
   },
   "url":{
-    "buymehomepage": "https://buyme.co.il"
-  }
+    "buymehomepage": "https://buyme.co.il",
+    "sender_and_receiver_page": "https://buyme.co.il/money/17573371?price=1000"
+  },
+   "upload": {
+     "gift_image": "/Users/siwarkhateeb/Downloads/BuyMeGift.jpeg"
+   }
 }
+
+

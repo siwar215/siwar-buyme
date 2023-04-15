@@ -1,4 +1,6 @@
 import json
+import time
+
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from pages.gift_purchase_screen import sender_and_receiver
@@ -18,5 +20,14 @@ class TestGiftPurchase(TestCase):
         self.gift_purchase_screen = sender_and_receiver(self.driver)
 
     def test_gift_purchase(self):
-        self.gift_purchase_screen.scroll_to_bottom_screen()
+        self.pick_business_screen.goto_link(self.cfg['url']['buymehomepage'])
+        self.pick_business_screen.choose_business_gift_card()
+        self.gift_purchase_screen.gift_purchase()
+        self.gift_purchase_screen.upload_a_picture()
+        self.gift_purchase_screen.enter_order_details()
 
+    def test_to_verify_only_gift_purchase_page(self):
+        self.gift_purchase_screen.goto_link(self.cfg['url']['sender_and_receiver_page'])
+        self.gift_purchase_screen.gift_purchase()
+        self.gift_purchase_screen.upload_a_picture()
+        self.gift_purchase_screen.enter_order_details()
