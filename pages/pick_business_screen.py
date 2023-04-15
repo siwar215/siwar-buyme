@@ -1,6 +1,4 @@
 import json
-import time
-
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
@@ -29,9 +27,6 @@ class Pick_Business(BasePage):
         driver_path = self.cfg['drivers']['chrome']
         self.driver = webdriver.Chrome(service=Service(driver_path))
         self.base_page = BasePage(self.driver)
-
-    # def scroll_to_bottom_screen(self):
-    #     BasePage.scroll_page(self, "down")
 
     def choose_business_gift_card(self):
         # clicking on the search button to view all the businesses on BuyMe website

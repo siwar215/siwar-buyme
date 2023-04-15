@@ -5,7 +5,7 @@ from pages.home_screen import Home
 from unittest import TestCase
 
 
-class TestRegistration(TestCase):
+class TestHome(TestCase):
 
     def setUp(self):
         f = open('../config.json', 'r')
