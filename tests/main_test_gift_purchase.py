@@ -1,4 +1,6 @@
 import json
+import os
+
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from pages.gift_purchase_screen import sender_and_receiver
@@ -9,11 +11,16 @@ from unittest import TestCase
 class TestGiftPurchase(TestCase):
 
     def setUp(self):
-        f = open('../config.json', 'r')
+        f = open('./config.json', 'r')
         config_json = json.load(f)
         self.cfg = config_json
         driver_path = self.cfg['drivers']['chrome']
-        self.driver = webdriver.Chrome(service=Service(driver_path))
+        if self.cfg["disable-notifications"]:
+            chrome_options = webdriver.ChromeOptions()
+            chrome_options.add_argument("--disable-notifications")
+            self.driver = webdriver.Chrome(service=Service(driver_path), chrome_options=chrome_options)
+        else:
+            self.driver = webdriver.Chrome(service=Service(driver_path))
         self.pick_business_screen = Pick_Business(self.driver)
         self.gift_purchase_screen = sender_and_receiver(self.driver)
 
