@@ -1,0 +1,91 @@
+[35mDEBUG   [0m selenium.webdriver.common.service:service.py:93 driver not found in PATH, trying Selenium Manager
+[35mDEBUG   [0m selenium.webdriver.common.selenium_manager:selenium_manager.py:88 Executing: /Users/siwarkhateeb/Library/Caches/pypoetry/virtualenvs/siwar-buyme-Vqth1sGJ-py3.8/lib/python3.8/site-packages/selenium/webdriver/common/macos/selenium-manager --browser chrome
+[35mDEBUG   [0m selenium.webdriver.common.selenium_manager:selenium_manager.py:76 Using driver at: /Users/siwarkhateeb/.cache/selenium/chromedriver/mac64/112.0.5615.49/chromedriver
+[35mDEBUG   [0m selenium.webdriver.common.service:service.py:208 Started executable: `</Users/siwarkhateeb/Downloads/chromedriver_mac_arm64/chromedriver>` in a child process with pid: 58903
+[35mDEBUG   [0m selenium.webdriver.remote.remote_connection:remote_connection.py:308 POST http://localhost:55864/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "args": ["--disable-notifications"]}}}}
+[35mDEBUG   [0m urllib3.connectionpool:connectionpool.py:228 Starting new HTTP connection (1): localhost:55864
+[35mDEBUG   [0m urllib3.connectionpool:connectionpool.py:456 http://localhost:55864 "POST /session HTTP/1.1" 200 869
+[35mDEBUG   [0m selenium.webdriver.remote.remote_connection:remote_connection.py:324 Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"112.0.5615.121","chrome":{"chromedriverVersion":"112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936})","userDataDir":"/var/folders/2d/zfpd_pkj2_1dtp80p_qhs9c00000gn/T/.com.google.Chrome.TfPA7L"},"goog:chromeOptions":{"debuggerAddress":"localhost:55889"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"mac os x","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"7a7212cbbcd1c3ed6f1da546163fccdc"}} | headers=HTTPHeaderDict({'Content-Length': '869', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+[35mDEBUG   [0m selenium.webdriver.remote.remote_connection:remote_connection.py:352 Finished Request
+[35mDEBUG   [0m selenium.webdriver.remote.remote_connection:remote_connection.py:308 POST http://localhost:55864/session/7a7212cbbcd1c3ed6f1da546163fccdc/url {"url": "https://buyme.co.il"}
+[35mDEBUG   [0m urllib3.connectionpool:connectionpool.py:456 http://localhost:55864 "POST /session/7a7212cbbcd1c3ed6f1da546163fccdc/url HTTP/1.1" 500 2317
+[35mDEBUG   [0m selenium.webdriver.remote.remote_connection:remote_connection.py:324 Remote response: status=500 | data={"value":{"error":"unknown error","message":"unknown error: cannot determine loading status\nfrom target frame detached\n  (Session info: chrome=112.0.5615.121)","stacktrace":"0   chromedriver                        0x000000010310cae8 chromedriver + 4958952\n1   chromedriver                        0x00000001031047b3 chromedriver + 4925363\n2   chromedriver                        0x0000000102cc6051 chromedriver + 475217\n3   chromedriver                        0x0000000102cadfbf chromedriver + 376767\n4   chromedriver                        0x0000000102cac81a chromedriver + 370714\n5   chromedriver                        0x0000000102cacd4c chromedriver + 372044\n6   chromedriver                        0x0000000102cbc0e0 chromedriver + 434400\n7   chromedriver                        0x0000000102cbd412 chromedriver + 439314\n8   chromedriver                        0x0000000102cced74 chromedriver + 511348\n9   chromedriver                        0x0000000102cd42fb chromedriver + 533243\n10  chromedriver                        0x0000000102cad1a8 chromedriver + 373160\n11  chromedriver                        0x0000000102ccea63 chromedriver + 510563\n12  chromedriver                        0x0000000102d4b4a4 chromedriver + 1021092\n13  chromedriver                        0x0000000102d2f9e3 chromedriver + 907747\n14  chromedriver                        0x0000000102cf9aef chromedriver + 686831\n15  chromedriver                        0x0000000102cfb00e chromedriver + 692238\n16  chromedriver                        0x00000001030c89ad chromedriver + 4680109\n17  chromedriver                        0x00000001030cdc12 chromedriver + 4701202\n18  chromedriver                        0x00000001030d479f chromedriver + 4728735\n19  chromedriver                        0x00000001030ceb7a chromedriver + 4705146\n20  chromedriver                        0x00000001030a127e chromedriver + 4518526\n21  chromedriver                        0x00000001030ee908 chromedriver + 4835592\n22  chromedriver                        0x00000001030eea87 chromedriver + 4835975\n23  chromedriver                        0x00000001030fe00f chromedriver + 4898831\n24  libsystem_pthread.dylib             0x00007ff8116fb1d3 _pthread_start + 125\n25  libsystem_pthread.dylib             0x00007ff8116f6bd3 thread_start + 15\n"}} | headers=HTTPHeaderDict({'Content-Length': '2317', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+[35mDEBUG   [0m selenium.webdriver.remote.remote_connection:remote_connection.py:352 Finished Request
+[1m[31mERROR   [0m root:base_page.py:40 Message: unknown error: cannot determine loading status
+from target frame detached
+  (Session info: chrome=112.0.5615.121)
+Stacktrace:
+0   chromedriver                        0x000000010310cae8 chromedriver + 4958952
+1   chromedriver                        0x00000001031047b3 chromedriver + 4925363
+2   chromedriver                        0x0000000102cc6051 chromedriver + 475217
+3   chromedriver                        0x0000000102cadfbf chromedriver + 376767
+4   chromedriver                        0x0000000102cac81a chromedriver + 370714
+5   chromedriver                        0x0000000102cacd4c chromedriver + 372044
+6   chromedriver                        0x0000000102cbc0e0 chromedriver + 434400
+7   chromedriver                        0x0000000102cbd412 chromedriver + 439314
+8   chromedriver                        0x0000000102cced74 chromedriver + 511348
+9   chromedriver                        0x0000000102cd42fb chromedriver + 533243
+10  chromedriver                        0x0000000102cad1a8 chromedriver + 373160
+11  chromedriver                        0x0000000102ccea63 chromedriver + 510563
+12  chromedriver                        0x0000000102d4b4a4 chromedriver + 1021092
+13  chromedriver                        0x0000000102d2f9e3 chromedriver + 907747
+14  chromedriver                        0x0000000102cf9aef chromedriver + 686831
+15  chromedriver                        0x0000000102cfb00e chromedriver + 692238
+16  chromedriver                        0x00000001030c89ad chromedriver + 4680109
+17  chromedriver                        0x00000001030cdc12 chromedriver + 4701202
+18  chromedriver                        0x00000001030d479f chromedriver + 4728735
+19  chromedriver                        0x00000001030ceb7a chromedriver + 4705146
+20  chromedriver                        0x00000001030a127e chromedriver + 4518526
+21  chromedriver                        0x00000001030ee908 chromedriver + 4835592
+22  chromedriver                        0x00000001030eea87 chromedriver + 4835975
+23  chromedriver                        0x00000001030fe00f chromedriver + 4898831
+24  libsystem_pthread.dylib             0x00007ff8116fb1d3 _pthread_start + 125
+25  libsystem_pthread.dylib             0x00007ff8116f6bd3 thread_start + 15
+Traceback (most recent call last):
+  File "/Users/siwarkhateeb/Downloads/siwar-buyme/pages/base_page.py", line 37, in goto_link
+    self.driver.get(link)
+  File "/Users/siwarkhateeb/Library/Caches/pypoetry/virtualenvs/siwar-buyme-Vqth1sGJ-py3.8/lib/python3.8/site-packages/selenium/webdriver/remote/webdriver.py", line 455, in get
+    self.execute(Command.GET, {"url": url})
+  File "/Users/siwarkhateeb/Library/Caches/pypoetry/virtualenvs/siwar-buyme-Vqth1sGJ-py3.8/lib/python3.8/site-packages/selenium/webdriver/remote/webdriver.py", line 444, in execute
+    self.error_handler.check_response(response)
+  File "/Users/siwarkhateeb/Library/Caches/pypoetry/virtualenvs/siwar-buyme-Vqth1sGJ-py3.8/lib/python3.8/site-packages/selenium/webdriver/remote/errorhandler.py", line 249, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: cannot determine loading status
+from target frame detached
+  (Session info: chrome=112.0.5615.121)
+Stacktrace:
+0   chromedriver                        0x000000010310cae8 chromedriver + 4958952
+1   chromedriver                        0x00000001031047b3 chromedriver + 4925363
+2   chromedriver                        0x0000000102cc6051 chromedriver + 475217
+3   chromedriver                        0x0000000102cadfbf chromedriver + 376767
+4   chromedriver                        0x0000000102cac81a chromedriver + 370714
+5   chromedriver                        0x0000000102cacd4c chromedriver + 372044
+6   chromedriver                        0x0000000102cbc0e0 chromedriver + 434400
+7   chromedriver                        0x0000000102cbd412 chromedriver + 439314
+8   chromedriver                        0x0000000102cced74 chromedriver + 511348
+9   chromedriver                        0x0000000102cd42fb chromedriver + 533243
+10  chromedriver                        0x0000000102cad1a8 chromedriver + 373160
+11  chromedriver                        0x0000000102ccea63 chromedriver + 510563
+12  chromedriver                        0x0000000102d4b4a4 chromedriver + 1021092
+13  chromedriver                        0x0000000102d2f9e3 chromedriver + 907747
+14  chromedriver                        0x0000000102cf9aef chromedriver + 686831
+15  chromedriver                        0x0000000102cfb00e chromedriver + 692238
+16  chromedriver                        0x00000001030c89ad chromedriver + 4680109
+17  chromedriver                        0x00000001030cdc12 chromedriver + 4701202
+18  chromedriver                        0x00000001030d479f chromedriver + 4728735
+19  chromedriver                        0x00000001030ceb7a chromedriver + 4705146
+20  chromedriver                        0x00000001030a127e chromedriver + 4518526
+21  chromedriver                        0x00000001030ee908 chromedriver + 4835592
+22  chromedriver                        0x00000001030eea87 chromedriver + 4835975
+23  chromedriver                        0x00000001030fe00f chromedriver + 4898831
+24  libsystem_pthread.dylib             0x00007ff8116fb1d3 _pthread_start + 125
+25  libsystem_pthread.dylib             0x00007ff8116f6bd3 thread_start + 15
+
+[35mDEBUG   [0m selenium.webdriver.remote.remote_connection:remote_connection.py:308 GET http://localhost:55864/session/7a7212cbbcd1c3ed6f1da546163fccdc/screenshot {}
+[35mDEBUG   [0m urllib3.connectionpool:connectionpool.py:456 http://localhost:55864 "GET /session/7a7212cbbcd1c3ed6f1da546163fccdc/screenshot HTTP/1.1" 200 14
+[35mDEBUG   [0m selenium.webdriver.remote.remote_connection:remote_connection.py:324 Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+[35mDEBUG   [0m selenium.webdriver.remote.remote_connection:remote_connection.py:352 Finished Request
+[35mDEBUG   [0m selenium.webdriver.remote.remote_connection:remote_connection.py:308 DELETE http://localhost:55864/session/7a7212cbbcd1c3ed6f1da546163fccdc {}
+[35mDEBUG   [0m urllib3.connectionpool:connectionpool.py:456 http://localhost:55864 "DELETE /session/7a7212cbbcd1c3ed6f1da546163fccdc HTTP/1.1" 200 14
+[35mDEBUG   [0m selenium.webdriver.remote.remote_connection:remote_connection.py:324 Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+[35mDEBUG   [0m selenium.webdriver.remote.remote_connection:remote_connection.py:352 Finished Request
