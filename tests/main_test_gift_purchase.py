@@ -1,6 +1,4 @@
 import json
-import time
-
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from pages.gift_purchase_screen import sender_and_receiver
@@ -31,3 +29,6 @@ class TestGiftPurchase(TestCase):
         self.gift_purchase_screen.gift_purchase()
         self.gift_purchase_screen.upload_a_picture()
         self.gift_purchase_screen.enter_order_details()
+
+    def tearDown(self):
+        self.driver.quit()

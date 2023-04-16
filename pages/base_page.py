@@ -1,7 +1,5 @@
 import json
 import logging
-import time
-
 from selenium.common import TimeoutException, NoSuchElementException
 from selenium.webdriver import ActionChains, Keys
 from selenium.webdriver.support.relative_locator import locate_with
@@ -33,6 +31,8 @@ class BasePage:
         self.cfg = config_json
 
     def goto_link(self, link):
+        # This function navigates to a given URL using Selenium WebDriver, waits for the page to load, and captures a
+        # screenshot of the page in case of any exceptions for logging or reporting purposes.
         try:
             self.driver.get(link)
             self.wait.until(EC.url_to_be(link))
@@ -42,6 +42,8 @@ class BasePage:
             allure.attach(ss_png, name="Screenshot", attachment_type=AttachmentType.PNG)
 
     def wait_and_click_on_element(self, locator):
+        # This function waits for an element to be present on the page based on the given locator, clicks on it,
+        # and captures a screenshot in case of any exceptions for logging or reporting purposes.
         try:
             self.wait.until(EC.presence_of_element_located(locator)).click()
         except Exception as e:
@@ -60,6 +62,9 @@ class BasePage:
             raise e
 
     def wait_and_enter_text(self, locator, text):
+        # This function waits for an element to be present on the page based on the given locator, enters the
+        # specified text into the element, and captures a screenshot in case of any exceptions for logging or
+        # reporting purposes.
         try:
             self.wait.until(EC.presence_of_element_located(locator)).send_keys(text)
         except Exception as e:
@@ -69,6 +74,9 @@ class BasePage:
             raise e
 
     def wait_and_click_on_below_element(self, element, elem_type, elem_val):
+        # This function waits for a reference element to be clickable, finds an element below the reference element
+        # based on the given type and value, and performs a click action on the found element. It captures a
+        # screenshot in case of any exceptions for logging or reporting purposes.
         try:
             relative_element = self.wait.until(EC.element_to_be_clickable(element))
             self.driver.find_element(locate_with(elem_type, elem_val).below(relative_element)).click()
@@ -79,6 +87,10 @@ class BasePage:
             raise e
 
     def wait_and_verify_text(self, locator, expected_text):
+        # This is a method definition for a function named wait_and_verify_text, which takes three parameters: self (
+        # which represents the instance of the class that this method belongs to), locator (which represents the
+        # locator of the element to be checked for presence and verified against expected text), and expected_text (
+        # which represents the expected text to be verified against the element's text content).
         try:
             text = self.wait.until(EC.presence_of_element_located(locator))
             if expected_text not in text:
@@ -110,11 +122,9 @@ class BasePage:
             if direction == "up":
                 # Scroll to the top of the page
                 self.driver.execute_script("window.scrollTo(0, 0);")
-                time.sleep(1)
             elif direction == "down":
                 # Scroll to the bottom of the page
                 self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-                time.sleep(1)
         except Exception as e:
             # Invalid direction parameter
             logging.exception(str(e))
@@ -126,7 +136,7 @@ class BasePage:
             self.wait.until(EC.url_to_be(link))
         except TimeoutException as e:
             logging.error(f"Timed out waiting for URL to be: {link}")
-            self.save_screenshot("verify_link-Failed")
+            self.save_screenshot("assert-url-Failed")
             raise e
 
     def scroll_search_and_click_element(self, locator, times):

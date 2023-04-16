@@ -47,6 +47,9 @@ class TestRegistration(TestCase):
         self.register_page.click_on_register()
         self.register_page.if_first_name_correct()
 
+    def tearDown(self):
+        self.driver.quit()
+
 
 
 

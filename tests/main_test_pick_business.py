@@ -18,3 +18,6 @@ class TestPickBusiness(TestCase):
     def test_pick_business(self):
         self.pick_business_screen.goto_link(self.cfg['url']['buymehomepage'])
         self.pick_business_screen.choose_business_gift_card()
+
+    def tearDown(self):
+        self.driver.quit()
